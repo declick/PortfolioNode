@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Mon Portfolio</title>
+  <link rel="stylesheet" href="/style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+
+<body>
+  <!-- Navigation menu -->
+<nav class="nav">
+  <ul class="nav-list">
+    <li class="nav-item"><a href="/" class="nav-link"><i class="fas fa-home"></i> Accueil</a></li>
+    <li class="nav-item"><a href="/projet" class="nav-link"><i class="fas fa-folder"></i> Projets</a></li>
+    <li class="nav-item"><a href="/about" class="nav-link"><i class="fas fa-user"></i> À propos</a></li>
+  </ul>
+</nav>
+
+  <!-- Header section with name and description -->
+  <header class="header">
+    <h1 class="header-title">Nom Complet</h1>
+    <p class="header-description">Développeur Web Passionné</p>
+  </header>
+
+  <!-- About Me section -->
+  <section class="section bio">
+    <h2 class="section-title">À Propos de Moi</h2>
+    <p class="section-content">Je suis un développeur web passionné avec une solide expérience dans la création
+      d'applications web modernes. Mes compétences incluent HTML, CSS, JavaScript, Node.js et bien plus encore. Je suis
+      constamment à la recherche de nouveaux défis et de nouvelles opportunités pour améliorer mes compétences.</p>
+    <a href="/about" class="contact-link">En savoir plus</a>
+  </section>
+
+  <!-- Recent Projects section -->
+  <section class="section projects">
+    <h2 class="section-title">Derniers Projets</h2>
+    <div class="project-list">
+      <% for (let i = projects.length - 2; i < projects.length; i++) { %>
+        <div class="project">
+          <h3 class="project-title fade-in"><%= projects[i].title %></h3>
+          <p class="project-description fade-in"><%= projects[i].description %></p>
+          <img class="project-image animated-box fade-in" src="<%= projects[i].image %>" alt="<%= projects[i].title %>">
+          <a href="<%= projects[i].link %>" class="project-link">Voir le Projet</a>
+        </div>
+      <% } %>
+    </div>
+  </section>
+
+  <!-- Contact section -->
+  <section class="section contact">
+    <h2 class="section-title">Contact</h2>
+    <a href="/about" class="contact-btn">Me Contacter</a>
+  </section>
+
+  <!-- Footer section -->
+  <footer class="footer">
+  <div class="social-icons">
+  <a href="https://www.linkedin.com/in/votreprofil" target="_blank" class="social-icon-link">
+    <i class="fab fa-linkedin"></i>
+  </a>
+  <a href="https://github.com/votrerepo" target="_blank" class="social-icon-link">
+    <i class="fab fa-github"></i>
+  </a>
+</div>
+    <p class="footer-text">&copy; 2023 Mon Portfolio</p>
+  </footer>
+
+  <script src="/script.js"></script>
+</body>
+
+</html>
