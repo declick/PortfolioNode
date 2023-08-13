@@ -1,7 +1,7 @@
 Portfolio Node  
 =====================================
 
-Template portfolio avec node.js
+Template portfolio node.js
 
 # Dependances 
  
